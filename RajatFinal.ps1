@@ -14,7 +14,7 @@ $chromeInstallerPath = "$env:TEMP\ChromeSetup.exe"
 Invoke-WebRequest -Uri $chromeInstallerUrl -OutFile $chromeInstallerPath
 
 # Install Chrome silently
-Start-Process msiexec.exe -ArgumentList "/i `"$chromeInstallerPath`" /qn" -Wait
+Start-Process -FilePath "$chromeInstallerPath"
 
 Start-Sleep -Seconds 300
 
