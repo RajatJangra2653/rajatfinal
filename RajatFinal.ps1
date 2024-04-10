@@ -16,7 +16,7 @@ Invoke-WebRequest -Uri $chromeInstallerUrl -OutFile $chromeInstallerPath
 # Install Chrome silently
 Start-Process -FilePath "$chromeInstallerPath"
 
-Start-Sleep -Seconds 300
+Start-Sleep -Seconds 180
 
 # Delete the downloaded file
 Remove-Item -Path $chromeInstallerPath -Force
