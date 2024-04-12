@@ -28,21 +28,21 @@ function Get-SID {
 }
 
 # Main script
-# try {
-#     Write-Host "Username: $username"
+ try {
+     Write-Host "Username: $username"
     
-#     # Get SID for the username
-#     $sid = Get-SID -Username $username
-#     if ($sid) {
-#         Write-Host "SID: $sid"
-#         # Now you can pass the SID to your function
-#         # your_function($sid)
-#     } else {
-#         Write-Host "Failed to retrieve SID."
-#     }
-# } catch {
-#     Write-Host "Error: $_"
-# }
+     # Get SID for the username
+     $sid = Get-SID -Username $username
+     if ($sid) {
+         Write-Host "SID: $sid"
+         # Now you can pass the SID to your function
+         # your_function($sid)
+     } else {
+         Write-Host "Failed to retrieve SID."
+     }
+ } catch {
+     Write-Host "Error: $_"
+ }
 $username
 $sid
 
